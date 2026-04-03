@@ -6,7 +6,7 @@ import axios from 'axios';
  * Redirects to login on 401 responses.
  */
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: import.meta.env.VITE_API_BASE_URL || 'https://parking-managment-system-backend.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
